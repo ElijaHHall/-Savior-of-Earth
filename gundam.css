@@ -1,0 +1,32 @@
+body {
+	
+	margin: 0;
+	padding: 0;
+}
+
+.bg 
+{	
+	position: relative;
+	background: #00fdff url("starfield.jpg");
+	height: 170vh;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	animation: animate 15s linear infinite;
+}
+#gundam {
+	height: 364px;
+	width: 270px;
+	position: relative;
+	left: 0;	
+	background: url('freedom.png');
+	background-size: cover;
+}
+
+	
+
+@keyframes animate 
+{
+	from {background-position: 0 0;}
+
+	to {background-position: 100% 0;}
+}
