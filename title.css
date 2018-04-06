@@ -1,0 +1,63 @@
+body {
+	
+	text-align: center;
+	text-align: bottom;
+	color: green;
+	font-size: 15px;
+}
+
+h1 {
+	margin-top: 200px;
+}
+.container {
+	color: green;
+}
+
+
+
+.bg {
+	
+	position: relative;
+	background: #00fdff url("starfield.jpg");
+	height: 170vh;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	animation: animate 15s linear infinite;
+}
+
+a {
+	color: green;
+
+	top: 50px;
+	right: 0px;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+button {
+	color: green;
+
+}
+
+ul {
+	padding: 10px;
+	background: rgba(255,255,255,0.5);
+	top: 50px;
+	right: 0px;
+}
+li {
+	display: inline;
+	padding: 0px 10px 0px 10px;
+
+}
+@keyframes animate 
+{
+	from {background-position: 0 0;}
+
+	to {background-position: 100% 0;}
+}
+
+
+
