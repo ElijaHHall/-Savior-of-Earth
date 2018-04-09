@@ -1,8 +1,6 @@
 
-TweenMax.to("#zaku", 2, {top: 530, ease: Back.easeOut, repeat:-1});
 
-
-$(document).ready(function(e) {
+TweenMax.to("#zaku", 0.5, {top: 550,x:100,roatate:"360", repeat:-1, yoyo:true});
 
 var mobilesuit = {
 	top: 150,
@@ -58,6 +56,12 @@ document.onkeydown = function(e) {
 	TweenMax.to(".blast", 10, {left: + 8000});
 
 	};
+var yoyo = myAnimation.yoyo("#zaku"); //gets current yoyo state
+
+myAnimation.yoyo( true ); //sets yoyo to true	
+
+
+
 
 function movemobilesuit() {
 	document.getElementById("mobilesuit").style.left = mobilesuit.left + "px";
@@ -66,12 +70,11 @@ function movemobilesuit() {
 }
 function createBlasts() {
 
-	document.getElementById("blasts").innerHTML = "";
 	document.getElementById("blasts").innerHTML += `<div class="blast" style='left:${blasts[blasts.length-1].left}px; top:${blasts[blasts.length-1].top}px;'></div>`;
 	}
 
 
-});
+
 
 
 
