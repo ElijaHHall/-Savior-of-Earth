@@ -7,21 +7,33 @@ body {
 .bg 
 {	
 	position: relative;
-	background: #00fdff url("starfield.jpg");
+	background: url("newstarfield.png");
+	width: 1200;
 	height: 170vh;
 	background-position: 0 0;
 	background-repeat: repeat-x;
 	animation: animate 15s linear infinite;
 }
-#gundam {
+#mobilesuit {
 	height: 364px;
-	width: 270px;
+	width: 545px;
 	position: relative;
-	left: 0;	
-	background: url('freedom.png');
+	top:100px;
+	left: 100px;	
+	background: url('sfreedom.png');
 	background-size: cover;
+
 }
 
+#energyblast {
+	background: url('blast.png');
+	background-size: cover;
+	position: absolute;
+	height: 42px;
+	width: 45px;
+	display: none;
+
+}
 	
 
 @keyframes animate 

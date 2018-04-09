@@ -6,11 +6,10 @@ body {
 	font-size: 15px;
 }
 
-h1 {
-	margin-top: 200px;
-}
+
 .container {
 	color: green;
+	margin-top: 200px;
 }
 
 
@@ -18,11 +17,11 @@ h1 {
 .bg {
 	
 	position: relative;
-	background: #00fdff url("starfield.jpg");
+	background: url("newstarfield.png");
 	height: 170vh;
 	background-position: 0 0;
 	background-repeat: repeat-x;
-	animation: animate 15s linear infinite;
+	animation: animate 30s linear infinite;
 }
 
 a {
