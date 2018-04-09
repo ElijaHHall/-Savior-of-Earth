@@ -1,44 +1,47 @@
-body {
-	
-	margin: 0;
-	padding: 0;
-}
 
 .bg 
 {	
 	position: relative;
 	background: url("newstarfield.png");
 	width: 1200;
-	height: 170vh;
-	background-position: 0 0;
-	background-repeat: repeat-x;
-	animation: animate 15s linear infinite;
+	height: 800px;
 }
 #mobilesuit {
-	height: 364px;
-	width: 545px;
-	position: relative;
-	top:100px;
-	left: 100px;	
+	height: 230px;
+	width: 330px;
+	position: absolute;
 	background: url('sfreedom.png');
 	background-size: cover;
 
 }
-
-#energyblast {
-	background: url('blast.png');
-	background-size: cover;
+#earth {
+	height: 300px;
+	width: 300px;
+	top: 50px;
+	left: 50px;
+}
+#zaku {
+	height: 230px;
+	width: 333px;
+	top:50px;
+	left: 1000px;
 	position: absolute;
-	height: 42px;
+	background: url('zaku.png');
+	background-size: cover;
+}
+#blasts{
+	width: 1200px;
+	height: 800px;
+	position: absolute;
+
+}
+.blast {
+	background: url('blast.png');
+	height: 40px;
 	width: 45px;
-	display: none;
+	top: 75px;
+	left: 100px;
+	position: absolute;
 
 }
-	
 
-@keyframes animate 
-{
-	from {background-position: 0 0;}
-
-	to {background-position: 100% 0;}
-}

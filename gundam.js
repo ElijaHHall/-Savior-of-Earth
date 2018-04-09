@@ -1,71 +1,78 @@
 
-// TweenMax.to();
+TweenMax.to("#zaku", 2, {top: 530, ease: Back.easeOut, repeat:-1});
+
+
 $(document).ready(function(e) {
 
-
-
-
-var gundam = {
-	top: 100,
+var mobilesuit = {
+	top: 150,
 	left: 100
 };
 
-var blast = [];
+var zaku = {
+	top: 250,
+	left: 1000
+};
+
+var blasts = [{
+	top: 60,
+	left: 100
+}];
+
+var earth = {
+	top: 50,
+	left: 100
+};
 
 document.onkeydown = function(e) {
 	console.log(e.keyCode);
 	if (e.keyCode === 65) {
 		console.log("left");
-		gundam.left = gundam.left - 20;
-		movegundam();
+		mobilesuit.left = mobilesuit.left - 20;
+		movemobilesuit();
 	}
 	else if (e.keyCode === 68) {
 		console.log("right");
-		gundam.left = gundam.left + 20;
-		movegundam();
+		mobilesuit.left = mobilesuit.left + 20;
+		movemobilesuit();
 	}
 	else if (e.keyCode === 83) {
 		console.log("down");
-		gundam.top = gundam.top  + 20;
-		movegundam();
+		mobilesuit.top = mobilesuit.top  + 20;
+		movemobilesuit();
 	}
 	else if (e.keyCode === 87) {
 		console.log("up");
-		gundam.top = gundam.top  - 20;
-		movegundam();
+		mobilesuit.top = mobilesuit.top  - 20;
+		movemobilesuit();
 	}
 	else if (e.keyCode === 16) {
 		console.log("fire");
-		blast.push({
-			left: gundam.left + 15,
-			top: gundam.top
+		blasts.push({
+			left: mobilesuit.left + 160,
+			top: mobilesuit.top 
 		});
-		createBlast();
+		createBlasts();
 	}
 
-	TweenMax.to(".blast", 20, {left: + 800});
-	document.onkeypress = function(e) {
+	TweenMax.to(".blast", 10, {left: + 8000});
 
-	}
-};
+	};
 
-function movegundam() {
-	document.getElementById("mobilesuit").style.left = gundam.left + "px";
-		document.getElementById("mobilesuit").style.top = gundam.top + "px";
+function movemobilesuit() {
+	document.getElementById("mobilesuit").style.left = mobilesuit.left + "px";
+	document.getElementById("mobilesuit").style.top = mobilesuit.top + "px";
 
 }
-function createBlast() {
-	document.getElementById("energyblast").innerHTML = "";
-	for( var blast = 0; blast < blast.length; blast = blast + 1){
-		document.getElementById("blast").innerHTML +=
-		`<div class="blast" style='left:${blast[blast].left}px; top:$
-		{blast[blast].top}px;'></div>`;
+function createBlasts() {
+
+	document.getElementById("blasts").innerHTML = "";
+	document.getElementById("blasts").innerHTML += `<div class="blast" style='left:${blasts[blasts.length-1].left}px; top:${blasts[blasts.length-1].top}px;'></div>`;
 	}
-	function movegundam () {
-		for ( var blast = 0; blast.length; blast = blast + 1){
-			blast[blast].top = blast[blast].top +5;
-		}
-	}
-}
+
 
 });
+
+
+
+
