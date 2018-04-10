@@ -18,16 +18,18 @@
 #earth {
 	height: 300px;
 	width: 300px;
-	top: 50px;
-	left: 50px;
+	top: 150px;
+	left: 150px;
 }
-#zaku {
+#zaku {	
+
+	background: url('zaku.png');
+
 	height: 230px;
-	width: 333px;
+	width: 300px;
 	top:50px;
 	left: 1000px;
 	position: absolute;
-	background: url('zaku.png');
 	background-size: cover;
 }
 #blasts{
