@@ -9,7 +9,13 @@
 	text-align: center;
 }
 
+h1 {
+	font-size: 150px;
 
+}
+button {
+	font-size: 100px;
+}
 .loseAlert {
 	color: #d9534f;
 	text-align: center;
@@ -24,6 +30,7 @@
 #mobilesuit {
 	height: 260px;
 	width: 390px;
+	top: 80px;
 	position: absolute;
 	background: url('sfreedom.png');
 	background-size: cover;
