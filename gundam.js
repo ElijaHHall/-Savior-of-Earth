@@ -47,7 +47,7 @@ document.onkeydown = function(e) {
 	}
 	else if (e.keyCode === 80) {	// when key is pressed more than 30 times, you win
 			keyPressedCount ++;
-			if (keyPressedCount > 20) {
+			if (keyPressedCount > 200) {
 				$(".loseAlert").css("display", "block");
 				$("#reset").click(function() {
 					location.reload();
