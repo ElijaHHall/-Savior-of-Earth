@@ -7,13 +7,23 @@ body {
 }
 
 
-h1 {
+.container {
 	color: white;
 	margin-top: 200px;
-
-
+	margin-bottom: 200px;
+	font-family: 'Russo One', sans-serif;
+	z-index: 100;
 }
 
+
+
+#earth {
+	background: url('Planeta-Terra.png');
+	height: 800px;
+	width: 800px;
+	top: 150px;
+	left: 150px;
+}
 
 
 
@@ -55,12 +65,5 @@ li {
 	padding: 0px 10px 0px 10px;
 
 }
-@keyframes animate 
-{
-	from {background-position: 0 0;}
-
-	to {background-position: 100% 0;}
-}
-
 
 

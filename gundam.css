@@ -6,6 +6,19 @@
 	background-size: cover;
 	width: 1200;
 	height: 800px;
+	text-align: center;
+}
+
+
+.loseAlert {
+	color: white;
+	text-align: center;
+	margin-left: 600px;
+	margin-top: 200px;
+	border: 5px solid transparent;
+	z-index: 100;
+	position: absolute;
+	display: none;
 }
 #mobilesuit {
 	height: 260px;
@@ -16,8 +29,9 @@
 
 }
 #earth {
-	height: 300px;
-	width: 300px;
+	background: url('Planeta-Terra.png');
+	height: 800px;
+	width: 800px;
 	top: 150px;
 	left: 150px;
 }
@@ -48,17 +62,8 @@
 
 }
 #reset {
+	color: ;
 }
 
-.loseAlert {
-	color: white;
-	border: 10px solid red;
-	text-align: center;
-	z-index: 100;
-	position: absolute;
-	display: none;
-	
 
-
-}
 
