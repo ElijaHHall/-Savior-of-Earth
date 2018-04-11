@@ -4,14 +4,14 @@
 	position: relative;
 	background: url("newstarfield.png");
 	background-size: cover;
-	width: 1200;
-	height: 800px;
+	width: 5000px;
+	height: 1000px;
 	text-align: center;
 }
 
 
 .loseAlert {
-	color: white;
+	color: #d9534f;
 	text-align: center;
 	margin-left: 600px;
 	margin-top: 200px;
@@ -19,6 +19,7 @@
 	z-index: 100;
 	position: absolute;
 	display: none;
+	font-size: 30px;
 }
 #mobilesuit {
 	height: 260px;
