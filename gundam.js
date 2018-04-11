@@ -1,26 +1,27 @@
 
 
-TweenMax.to("#zaku", 0.4, {top: 550, repeat:-1, yoyo:true});
+TweenMax.to("#zaku", 0.5, {top: 550, repeat:-1, yoyo:true});
 
-var mobilesuit = {
-	top: 150,
-	left: 100
-};
-
-var zaku = {
-	top: 250,
-	left: 50
-};
+var keyPressedCount = 0;
 
 var blasts = [{
 	top: 60,
 	left: 100
 }];
+var zaku = {
+	top: 250,
+	left: 50
+};
 
+var mobilesuit = {
+	top: 150,
+	left: 100
+};
 var earth = {
 	top: 50,
 	left: 100
 };
+
 
 document.onkeydown = function(e) {
 	console.log(e.keyCode);
@@ -44,71 +45,62 @@ document.onkeydown = function(e) {
 		mobilesuit.top = mobilesuit.top  - 25;
 		movemobilesuit();
 	}
-	else if (e.keyCode === 80) {
-		console.log("fire");
-		blasts.push({
+	else if (e.keyCode === 80) {	// when key is pressed more than 30 times, you win
+			keyPressedCount ++;
+			if (keyPressedCount > 200) {
+				$(".loseAlert").css("display", "block");
+				$("#reset").click(function() {
+					location.reload();
+				})
+				console.log("you win");
+			} 
+
+			blasts.push({
 			left: mobilesuit.left + 160,
 			top: mobilesuit.top 
 		});
 		createBlasts();	
 
-		var robot = document.getElementById("zaku");
 }
-	var energyblast = document.getElementsByClassName("blast");
+var energyblast = document.getElementsByClassName("blast");
+var robot = document.getElementById("zaku");
 	
-	TweenMax.to(energyblast, 10, {left: + 1150, onUpdate: function() {
+	TweenMax.to(energyblast, 10, {left: 8000, onUpdate: function() {
 		// console.log(energyblast);
 		// console.log(robot.offsetTop);
 		checkCollision(robot, energyblast);
+
 	}});
 
-	};
+};
+
+
+
 
 
 var yoyo = myAnimation.yoyo("#zaku"); //gets current yoyo state
 
 myAnimation.yoyo( true ); //sets yoyo to true	
 
-
-
-
-var blasts = {x: 100, y:75, height: 40, width: 45};
-var zaku = {x: 150, y: 50, height: 230, width: 330};
-
-
-
-
-	function checkCollision(element1, element2) {
-        if (element1.offsetTop < element2[0].offsetTop + element2[0].clientHeight &&
-        element1.offsetLeft < element2[0].offsetLeft + element2[0].clientWidth && 
-        element1.clientWidth + element1.offsetLeft > element2[0].offsetLeft) {
-            alert('collision!');
-        }
-    
-
-	// if (blasts.x < zaku.x + zaku.width &&
- //   blasts.x + blasts.width > zaku.x &&
- //   blasts.y < zaku.y + zaku.height &&
- //   blasts.height + blasts.y > zaku.y) {
-    // collision detected!	
- 
-
-}
+var energyblast = {offsetLeft: 100, offsetTop:75, height: 40, width: 45};
+var robot = {offsetLeft: 150, offsetTop: 50, height: 230, width: 330};
 
 function movemobilesuit() {
 	document.getElementById("mobilesuit").style.left = mobilesuit.left + "px";
 	document.getElementById("mobilesuit").style.top = mobilesuit.top + "px";
 }
 
-function createBlasts() {
 
+
+	function checkCollision(blasts, zaku) {
+        if (blasts.offsetTop < zaku[0].offsetTop + zaku[0].clientHeight &&
+        blasts.offsetLeft < zaku[0].offsetLeft + zaku[0].clientWidth && 
+        blasts.clientWidth + blasts.offsetLeft > zaku[0].offsetLeft) {
+            console.log('collision!'); 
+        }
+}
+
+function createBlasts() {
 	document.getElementById("blasts").innerHTML += `<div class="blast" id="missile" style='left:${blasts[blasts.length-1].left}px; top:${blasts[blasts.length-1].top}px;'></div>`;
 	// checkCollision("collision detected");
-	}
-
-
-
-
-
-
-
+}

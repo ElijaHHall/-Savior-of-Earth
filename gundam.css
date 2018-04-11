@@ -8,8 +8,8 @@
 	height: 800px;
 }
 #mobilesuit {
-	height: 230px;
-	width: 330px;
+	height: 260px;
+	width: 390px;
 	position: absolute;
 	background: url('sfreedom.png');
 	background-size: cover;
@@ -26,7 +26,7 @@
 	background: url('zaku.png');
 
 	height: 230px;
-	width: 300px;
+	width: 330px;
 	top:50px;
 	left: 1000px;
 	position: absolute;
@@ -45,6 +45,20 @@
 	top: 75px;
 	left: 100px;
 	position: absolute;
+
+}
+#reset {
+}
+
+.loseAlert {
+	color: white;
+	border: 10px solid red;
+	text-align: center;
+	z-index: 100;
+	position: absolute;
+	display: none;
+	
+
 
 }
 

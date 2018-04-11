@@ -7,10 +7,13 @@ body {
 }
 
 
-.container {
-	color: green;
+h1 {
+	color: white;
 	margin-top: 200px;
+
+
 }
+
 
 
 
@@ -23,6 +26,7 @@ body {
 	background-repeat: repeat-x;
 	animation: animate 30s linear infinite;
 }
+
 
 a {
 	color: green;
